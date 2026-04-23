@@ -1,0 +1,25 @@
+{
+  "overview": "An immersive 3D Bhagavad Gita explorer with a divine golden cosmic aesthetic. Users can search slokas by chapter and verse, browse all 18 chapters, read Sanskrit texts with transliterations and multi-language meanings, and experience voice-enabled spiritual exploration in a visually rich celestial environment.",
+  "features": [
+    "Full-screen 3D hero landing with cosmic parallax and golden particles",
+    "Sloka search by chapter/verse number with text and voice input",
+    "18-chapter navigation with summaries and full sloka listings",
+    "Sanskrit text, transliteration, and meanings in English, Hindi, Telugu, and Sanskrit",
+    "Audio playback for Sanskrit chanting on each sloka",
+    "Multi-language UI with dynamic switching and localStorage persistence",
+    "Immersive golden cosmic visual theme with Three.js animations",
+    "Responsive design for desktop and mobile"
+  ],
+  "category": "showcase",
+  "tags": [
+    "bhagavad-gita",
+    "3d",
+    "spiritual",
+    "threejs",
+    "sanskrit",
+    "multi-language",
+    "voice-input",
+    "cosmic"
+  ],
+  "last_updated": "2026-04-23T07:26:03.797Z"
+}

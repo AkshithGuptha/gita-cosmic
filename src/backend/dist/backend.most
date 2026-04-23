@@ -1,0 +1,42 @@
+// Version: 1.0.0
+type ChapterMeta__15176108 =
+  {
+    chapterNumber : Nat;
+    englishName : Text;
+    sanskritName : Text;
+    summary : Text;
+    totalSlokas : Nat
+  };
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type MultiLangText__933816517 =
+  {english : Text; hindi : Text; sanskrit : Text; telugu : Text};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type Sloka__342416631 =
+  {
+    chapterNumber : Nat;
+    explanation : Text;
+    meanings : MultiLangText__933816517;
+    sanskritText : Text;
+    slokaNumber : Nat;
+    transliteration : Text
+  };
+actor {
+  stable chapters :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ChapterMeta__15176108]];
+      var elementIndex : Nat__490723111
+    };
+  stable slokas :
+    {
+      var root : Node__46230540<(Nat, Nat), Sloka__342416631>;
+      var size : Nat__490723111
+    }
+};

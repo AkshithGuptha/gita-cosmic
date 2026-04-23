@@ -1,0 +1,40 @@
+type Sloka = 
+ record {
+   chapterNumber: nat;
+   explanation: text;
+   meanings: MultiLangText;
+   sanskritText: text;
+   slokaNumber: nat;
+   transliteration: text;
+ };
+type PagedResult = 
+ record {
+   items: vec Sloka;
+   page: nat;
+   pageSize: nat;
+   totalCount: nat;
+ };
+type MultiLangText = 
+ record {
+   english: text;
+   hindi: text;
+   sanskrit: text;
+   telugu: text;
+ };
+type ChapterMeta = 
+ record {
+   chapterNumber: nat;
+   englishName: text;
+   sanskritName: text;
+   summary: text;
+   totalSlokas: nat;
+ };
+service : {
+  getChapter: (chapterNumber: nat) -> (opt ChapterMeta) query;
+  getChapterSlokas: (chapterNumber: nat) -> (vec Sloka) query;
+  getChapters: () -> (vec ChapterMeta) query;
+  getDailySloka: () -> (opt Sloka) query;
+  getSloka: (chapterNumber: nat, slokaNumber: nat) -> (opt Sloka) query;
+  searchSlokas: (keyword: text, page: nat, pageSize: nat) ->
+   (PagedResult) query;
+}
